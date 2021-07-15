@@ -1,0 +1,18 @@
+/* *{
+  cursor: none;
+
+}
+
+.ball{
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  background: linear-gradient(to left top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+  position: absolute;
+  pointer-events: none;
+
+  top: 0;
+  left: 0 ;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+} */
