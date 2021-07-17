@@ -9,7 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap" rel="stylesheet">
-  <!--  -->
+  <!-- js -->
+  <script src="courseSelector.js" charset="utf-8"></script>
   <title>Selector</title>
 </head>
 
@@ -25,10 +26,17 @@
     <div class="buttonItems">
 
 
-        <button type="button" name="button" class="MathBtn">ENGLISH</button>
+        <button class="langButton" type="button" name="button" class="MathBtn" onclick ="englishFunc()">ENGLISH</button>
 
 
-        <button type="button" name="button" class="EngBtn">MATH</button>
+        <button class="langButton" type="button" name="button" class="EngBtn" onclick ="mathFunc()">MATH</button>
+
+    </div>
+
+    <div class="diffButtons" id="buttonBox">
+      <!-- <button class="diffButton easy" type="button" name="button">EASY</button>
+      <button class="diffButton medium" type="button" name="button">MEDIUM</button>
+      <button class="diffButton hard" type="button" name="button">HARD</button> -->
 
     </div>
 
