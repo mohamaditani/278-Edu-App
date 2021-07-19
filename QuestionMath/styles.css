@@ -118,6 +118,15 @@ input:focus {
   background: rgb(255, 163, 67)
 }
 
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 .score {
   background-color: #ed872d;
   font-weight: bold;
@@ -138,4 +147,39 @@ input:focus {
   left: 0;
   right: 0;
 
+}
+
+.backgroundColorRight{
+  background-color: rgba(0, 128, 0, 0.9);
+  transition: background 0.2s linear;
+}
+
+.backgroundColorWrong{
+  background-color: rgba(139,0,0, 0.9);
+  transition: background 0.2s linear;
+}
+
+button{
+  font-weight: 600;
+  color: white;
+  border-radius: 35px;
+  border-width: 0;
+  text-align: center;
+
+  font-size: 2vw;
+
+
+  overflow: hidden;
+  text-align: center;
+
+  margin-top: 35px;
+  padding: 10px;
+  width: 20%;
+  background-color: #ed872d;
+
+
+  transition: background 0.3s ease-in-out;
+}
+button:hover{
+  background-color: #3980a6;
 }
