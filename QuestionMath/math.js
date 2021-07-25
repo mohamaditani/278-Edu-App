@@ -97,7 +97,11 @@ function calc(num1, opp, num2) {
   return Math.floor(answer * 10) / 10
 }
 
-
+// document.addEventListener('keydown', (event) => {
+// var name = event.key;
+// var keyCode = event.code;
+// console.log(keyCode);
+// }, false);
 
 function timer(answer) {
   maxTime -= 1;
@@ -106,6 +110,8 @@ function timer(answer) {
   let scoreCounter = document.getElementById("correct");
   let InfoBox = document.getElementById("iBox");
   htmlTime.innerText = maxTime;
+
+
 
   if (maxTime === 0) {
     if (guess === answer) {
@@ -132,12 +138,13 @@ function timer(answer) {
 
     nextProblem();
   }
+
 }
 
 function endFunction() {
   alert(currentScore)
 }
-// 
+//
 // function submitQuiz(){
 // skipTimer = true;
 // }

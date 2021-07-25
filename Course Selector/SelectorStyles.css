@@ -128,3 +128,16 @@ margin-top: 10px;
 .hard:hover{
   background-color: red ;
 }
+
+.logout{
+  position: absolute;
+  height: 50px;
+  font-size: 20px;
+  background-color: rgb(205, 66, 35);
+  bottom: 10px;
+
+}
+
+.logout:hover{
+  background-color: red;
+}

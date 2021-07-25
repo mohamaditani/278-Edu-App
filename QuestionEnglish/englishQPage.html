@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap" rel="stylesheet">
   <!-- js -->
-  <script src="math.js" charset="utf-8"></script>
+  <script src="english.js" charset="utf-8"></script>
 
   <title>English</title>
 </head>
@@ -37,7 +37,17 @@
 
 
           <div class="currentProblem">
-              <p class="problemTitle">Problem:</p>
+              <p class="problemTitle"><span id=titleBox>A</span>:</p>
+
+              <div id="answerbox" class="answerbox" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+              </div>
+
+              <div class="sel">
+                <div class="s1" draggable="true" ondragstart="drag(event)">A</div>
+                <div class="s2" draggable="true" ondragstart="drag(event)">B</div>
+                <div class="s3" draggable="true" ondragstart="drag(event)">C</div>
+              </div>
 
           </div>
         </div>

@@ -1,39 +1,39 @@
 html, body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
   font-family: 'Poppins', sans-serif;
-  overflow: hidden;
 }
 
 .containBox {
-  overflow: auto;
-  background: url('images/EnglishBackground.jpg');
   position: relative;
+  display: flex;
+  overflow: auto;
+  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
   width: 100%;
   height: 100%;
   min-height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  background: url('images/EnglishBackground.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .pageInfo {
-  overflow: auto;
-  background: rgba(255, 255, 255, 0.3);
   position: relative;
+  display: flex;
+  overflow: auto;
+  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
   width: 100%;
   height: 100%;
   min-height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  background: rgba(255, 255, 255, 0.3);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -42,27 +42,25 @@ html, body {
 
 .InfoBox {
   position: relative;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 25px;
   width: 70%;
   height: 40em;
-  text-align: center;
-  padding: 20px 35px 37px 35px;
-
   min-height: 50vh;
-
+  padding: 20px 35px 37px 35px;
+  text-align: center;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 h1 {
-  font-size: 45px;
   color: #ed872d;
+  font-size: 45px;
   /* text-decoration: underline; */
 }
 
 hr {
-  border: 1px solid rgba(237, 135, 45, 0.3);
-  margin-bottom: 30px;
   width: 30%;
+  margin-bottom: 30px;
+  border: 1px solid rgba(237, 135, 45, 0.3);
 }
 
 .time {
@@ -70,48 +68,46 @@ hr {
 }
 
 .time p {
+  color: #3980a6;
   font-size: 30px;
   font-weight: bold;
-  color: #3980a6
 }
 
 .time span {
-  font-size: 40px;
   color: #ed872d;
+  font-size: 40px;
 }
 
 .problemTitle {
-  font-size: 30px;
-  color: #25546d;
-
   position: relative;
+  color: #25546d;
+  font-size: 30px;
 }
 
 .probItem {
+  position: relative;
+  color: #25546d;
   font-size: 40px;
   font-weight: bold;
-  color: #25546d;
-
-  position: relative;
 }
 
 input {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
-  font-family: Poppins;
-  font-size: 16px;
-  border: none;
-  background: transparent;
   width: 10%;
-  line-height: 2;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  transition: background 0.4s linear;
+  text-align: center;
+  color: white;
+  border: none;
   border: 2px solid rgba(57, 128, 166, 0.8);
   border-radius: 25px;
-  color: white;
   outline: none;
-  text-align: center;
-  transition: background 0.4s linear;
+  background: transparent;
+  font-family: Poppins;
+  font-size: 16px;
+  line-height: 2;
 }
 
 input:focus {
@@ -119,23 +115,67 @@ input:focus {
 }
 
 .score {
-  background-color: #ed872d;
-  font-weight: bold;
-  color: white;
-  border-radius: 100px;
-  font-size: 30px;
-  padding: 10px;
   display: inline-block;
   float: right;
   margin-top: -3%;
+  padding: 10px;
+  color: white;
+  border-radius: 100px;
+  background-color: #ed872d;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .note {
-  color: grey;
-  font-style: italic;
   position: absolute;
+  right: 0;
   bottom: 0;
   left: 0;
-  right: 0;
+  color: grey;
+  font-style: italic;
+}
 
+.currentProblem {}
+
+.answerbox {
+  overflow: hidden;
+  width: 210px;
+  height: 60px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10px;
+  border-radius: 20px;
+  background-color: rgba(99, 99, 99, 0.5);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.sel {
+  display: flex;
+  justify-content: space-around;
+  /* background-color: blue; */
+  width: 100%;
+  height: 100px;
+  margin-top: 50px;
+}
+
+.s1, .s2, .s3 {
+  width: 140px;
+  height: 50px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-top: 20px;
+  border-radius: 20px;
+  background-color: rgba(255, 163, 67, 0.6);
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+
+  overflow: hidden;
+
+  transition: background 0.3s ease-in-out;
+}
+
+.s1:hover, .s2:hover, .s3:hover{
+  background-color: rgba(255, 163, 67, 1);
 }
