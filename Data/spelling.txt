@@ -8,7 +8,6 @@ Cemetary;Cemetery;Cemmetery;Cemetery
 Defendent;Defandant;Defendant;Defendant
 horoscope;haroscope;haroescope;horoscope
 perepherel;periphrial;peripheral;peripheral
-
 Litegants;Litigents;Litigants;Litigants
 couragous;courageous;courageaus;courageous
 succesful;successful;successfull;successful
@@ -19,7 +18,6 @@ wherefore;wherefor;wharefore;wherefore
 anihilate;annihillate;annihilate;annihilate
 occasion;occassion;occation;occasion
 Stoecaly;Stoically;Stoicaly;Stoically
-
 maditation;aberrance;delibarate;aberrance
 duration;economicel;dustur;duration
 privelege;nuisence;familiar;familiar

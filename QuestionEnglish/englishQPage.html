@@ -17,10 +17,10 @@
 
 <body>
   <div class="containBox">
-
     <div class="pageInfo">
+      <button type="button" name="button" class="exit">Exit Quiz</button>
 
-      <div class="InfoBox">
+      <div class="InfoBox" id="iBox">
 
         <h1>English Quiz</h1>
         <hr>
@@ -28,7 +28,7 @@
           <div class="score">
             <legend>Score</legend>
             <div>
-              <span id="correct">0</span> / <span id="total"></span>
+              <span id="correct">0</span> / <span id="total">5</span>
             </div>
           </div>
           <div class="time">
@@ -37,23 +37,23 @@
 
 
           <div class="currentProblem">
-              <p class="problemTitle"><span id=titleBox>A</span>:</p>
+              <p class="problemTitle"><span id=titleBox></span>:</p>
 
               <div id="answerbox" class="answerbox" ondrop="drop(event)" ondragover="allowDrop(event)">
 
               </div>
 
               <div class="sel">
-                <div class="s1" draggable="true" ondragstart="drag(event)">A</div>
-                <div class="s2" draggable="true" ondragstart="drag(event)">B</div>
-                <div class="s3" draggable="true" ondragstart="drag(event)">C</div>
+                <div id="s1"class="s1" draggable="true" ondragstart="drag(event)"></div>
+                <div id="s2"class="s2" draggable="true" ondragstart="drag(event)"></div>
+                <div id="s3"class="s3" draggable="true" ondragstart="drag(event)"></div>
               </div>
 
           </div>
         </div>
 
         <div class="note">
-          <p>You have 5 seconds for each problem. How many can you solve?</p>
+          <p>Choose the correct Spelling or Synonym and drag it into the box!</p>
         </div>
       </div>
     </div>

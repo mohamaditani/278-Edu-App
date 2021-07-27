@@ -135,8 +135,6 @@ input:focus {
   font-style: italic;
 }
 
-.currentProblem {}
-
 .answerbox {
   overflow: hidden;
   width: 210px;
@@ -160,22 +158,48 @@ input:focus {
 }
 
 .s1, .s2, .s3 {
+  overflow: hidden;
   width: 140px;
   height: 50px;
   margin-top: auto;
   margin-bottom: auto;
   padding-top: 20px;
+  transition: background 0.3s ease-in-out;
   border-radius: 20px;
   background-color: rgba(255, 163, 67, 0.6);
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
   font-weight: bold;
-
-  overflow: hidden;
-
-  transition: background 0.3s ease-in-out;
 }
 
-.s1:hover, .s2:hover, .s3:hover{
+.s1:hover, .s2:hover, .s3:hover {
   background-color: rgba(255, 163, 67, 1);
+}
+
+.backgroundColorRight {
+  transition: background 0.2s linear;
+  background-color: rgba(0, 128, 0, 0.9);
+}
+
+.backgroundColorWrong {
+  transition: background 0.2s linear;
+  background-color: rgba(139, 0, 0, 0.9);
+}
+
+.exit {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  padding: 10px;
+  transition: background 0.3s ease-in-out;
+  color: white;
+  border: none;
+  border-radius: 100px;
+  background-color: rgba(139, 0, 0, 0.2);
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
+
+.exit:hover {
+  background-color: rgba(139, 0, 0, 0.9);
 }

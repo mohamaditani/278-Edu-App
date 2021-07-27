@@ -7,7 +7,7 @@ var questionCount = 0;
 var difficultyMultiplyer = 1;
 var audioRight = new Audio('../Audio/Right.mp3');
 var audioWrong = new Audio('../Audio/Wrong.mp3');
-var skipTimer = false;
+// var skipTimer = false;
 
 window.onload = function() {
   setDif();
