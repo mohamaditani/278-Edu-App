@@ -15,40 +15,43 @@
   <title>Login</title>
 </head>
 
-<body >
+<body>
 
   <div class="containBox">
     <div class="loginBox">
 
-      <form action="">
+      <form action="login.php" method="post">
         <h1>LOGIN</h1>
         <div class="formSection">
           <div class="formItem">
-            <input class="formInput" type="text" name="" value="" placeholder="Username">
+            <input class="formInput" type="text" name="loginUsernameField" value="" placeholder="Username">
           </div>
 
           <div class="formItem">
-            <input class="formInput" type="password" name="" value="" placeholder="Password">
+            <input class="formInput" type="password" name="loginPasswordField" value="" placeholder="Password">
           </div>
+          <span id="checkAccount"></span>
 
-          <button class="formButton" type="button" name="button">Login</button>
+          <button class="formButton" type="submit" name="buttonLogin">Login</button>
         </div>
+      </form>
 
+      <form action="login.php" method="post">
         <hr>
         <h1>SIGN UP</h1>
         <div class="formSection">
           <div class="formItem">
-            <input class="formInput" type="text" name="" value="" placeholder="Username">
+            <input class="formInput" type="text" name="signUsernameField" value="" placeholder="Username">
           </div>
 
           <div class="formItem">
-            <input class="formInput" type="password" name="" value="" placeholder="Password">
+            <input class="formInput" type="password" name="signPasswordField" value="" placeholder="Password">
           </div>
 
           <div class="formItem">
-            <input class="formInput" type="password" name="" value="" placeholder="Confirm Password">
+            <input class="formInput" type="password" name="signPasswordRepField" value="" placeholder="Confirm Password">
           </div>
-          <button class="formButton" type="button" name="button">Sign-up</button>
+          <button class="formButton" type="submit" name="buttonSignup">Sign-up</button>
         </div>
       </form>
 
