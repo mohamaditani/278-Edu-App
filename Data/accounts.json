@@ -1,0 +1,33 @@
+{
+  "users": [
+    {
+      "name": "Moe",
+      "password" : "myPass",
+      "English" : {
+        "easy": [],
+        "medium": [],
+        "hard": []
+      },
+      "Math" : {
+        "easy": [],
+        "medium": [],
+        "hard": []
+      }
+    },
+
+    {
+      "name": "Moe2",
+      "password" : "myPass2",
+      "English" : {
+        "easy": [],
+        "medium": [],
+        "hard": []
+      },
+      "Math" : {
+        "easy": [],
+        "medium": [],
+        "hard": []
+      }
+    }
+  ]
+}
