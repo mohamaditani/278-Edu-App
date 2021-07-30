@@ -1,18 +1,62 @@
-/* *{
+*{
   cursor: none;
 
 }
 
 .ball{
-  height: 7rem;
-  width: 7rem;
+  height: 1rem;
+  width: 1rem;
   border-radius: 50%;
-  background: linear-gradient(to left top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
-  position: absolute;
+  /* background: linear-gradient(to left top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)); */
+  position:absolute;
   pointer-events: none;
 
-  top: 0;
-  left: 0 ;
-  transform: translate(-50%, -50%);
-  z-index: 100;
-} */
+  animation: color-change-m 2s infinite;
+  /* top: 0;
+  left: 0 ; */
+  /* transform: translate(-50%, -50%); */
+  z-index: 3;
+}
+
+
+@keyframes color-change-m {
+  0% {
+    background-color: #ed872d;
+  }
+
+  50% {
+    background-color:rgb(170, 87, 214) ;
+  }
+
+  100% {
+    background-color: #ed872d;
+  }
+}
+
+@-moz-keyframes color-change-m {
+  0% {
+    background-color: #ed872d;
+  }
+
+  50% {
+    background-color:rgb(170, 87, 214) ;
+  }
+
+  100% {
+    background-color: #ed872d;
+  }
+}
+
+@-webkit-keyframes color-change-m {
+  0% {
+    background-color: #ed872d;
+  }
+
+  50% {
+    background-color:rgb(170, 87, 214) ;
+  }
+
+  100% {
+    background-color: #ed872d;
+  }
+}

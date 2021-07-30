@@ -17,6 +17,11 @@ window.onload = function() {
 function setDif() {
   let url = new URL(window.location.href);
   let difficulty = url.searchParams.get('pageDif');
+  let name = url.searchParams.get('name');
+    /////////////////setting name to exit
+    let exform = document.getElementById("exitButton");
+    exform.action = "../Course Selector/Selector.html?name=" + name;
+    //////////////////
 
   if (difficulty === "easy") {
     questionCount = 5;
@@ -25,14 +30,14 @@ function setDif() {
     difficultyMultiplyer = 10;
   } else if (difficulty === "medium") {
     questionCount = 10;
-    maxTime = 15;
-    lockTime = 15;
-    difficultyMultiplyer = 30;
+    maxTime = 10;
+    lockTime = 10;
+    difficultyMultiplyer = 20;
   } else {
     questionCount = 15;
-    maxTime = 20;
-    lockTime = 20;
-    difficultyMultiplyer = 50;
+    maxTime = 10;
+    lockTime = 10;
+    difficultyMultiplyer = 30;
   }
   let totalScore = document.getElementById("total");
   totalScore.innerText = questionCount;
@@ -94,7 +99,9 @@ function calc(num1, opp, num2) {
     default:
   }
 
-  return Math.floor(answer * 10) / 10
+  return Math.floor(answer * 100) / 100
+
+
 }
 
 // document.addEventListener('keydown', (event) => {
@@ -105,7 +112,7 @@ function calc(num1, opp, num2) {
 
 function timer(answer) {
   maxTime -= 1;
-  let guess = parseInt(document.getElementById("guess").value);
+  let guess = parseFloat(document.getElementById("guess").value);
   let htmlTime = document.getElementById("timeNum");
   let scoreCounter = document.getElementById("correct");
   let InfoBox = document.getElementById("iBox");
@@ -114,6 +121,8 @@ function timer(answer) {
 
 
   if (maxTime === 0) {
+    // alert(answer);
+
     if (guess === answer) {
       currentScore += 1;
       scoreCounter.innerHTML = currentScore;

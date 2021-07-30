@@ -1,0 +1,21 @@
+body {
+  background-color: rgb(154, 221, 238);
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  color: #ed872d;
+
+
+}
+
+img{
+
+  width: 30%;
+
+}

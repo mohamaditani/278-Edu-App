@@ -1,3 +1,4 @@
+
 var maxTime = 5;
 var questionCounter = 0;
 var currentScore = 0;
@@ -14,13 +15,21 @@ var audioRight = new Audio('../Audio/Right.mp3');
 var audioWrong = new Audio('../Audio/Wrong.mp3');
 
 window.onload = function() {
+
   setDif();
   nextProblem();
 };
 
+
+
 function setDif() {
   let url = new URL(window.location.href);
   let difficulty = url.searchParams.get('pageDif');
+let names = url.searchParams.get('name');
+  /////////////////setting name to exit
+  let exform = document.getElementById("exitButton");
+  exform.action = "../Course Selector/Selector.html?name=" + names;
+  //////////////////
 
   if (difficulty === "easy") {
     indexStart = 0;
@@ -160,14 +169,46 @@ let InfoBox = document.getElementById("iBox");
     questionCounter += 1;
     document.getElementById("answerbox").innerText = "";
 
-    if (questionCounter === 5) {
+    if (questionCounter != 6) {
+      nextProblem();
+    }else{
       endFunction();
-    }
-
-    nextProblem();
-  }
+  }}
 }
 
 function endFunction() {
-  alert(currentScore)
+  clearInterval(timers);
+  sendGrades(currentScore);
+}
+
+var jsonUrl = "../Data/accounts.JSON";
+
+function sendGrades(grade){
+  let url = new URL(window.location.href);
+  let difficulty = url.searchParams.get('pageDif');
+  let names = url.searchParams.get('name');
+
+  var ajax = new XMLHttpRequest();
+  ajax.onreadystatechange = function() {
+    if (ajax.readyState === 4 && ajax.status === 200) {
+      let jsonData = JSON.parse(ajax.responseText);
+      for(let i = 0; i < jsonData.users.length; i++){
+        if(jsonData.users[i].name === names){
+          if(difficulty === "easy"){
+            jsonData.users[i].English.easy.push(grade);
+          }else if (difficulty === "medium") {
+            jsonData.users[i].English.medium.push(grade);
+          }else{
+            jsonData.users[i].English.hard.push(grade);
+          }
+        }
+      }
+      alert(jsonData.users[0].English.easy);
+
+    }
+  }
+  ajax.open("GET", jsonUrl, false);
+  ajax.send();
+
+
 }

@@ -6,29 +6,37 @@
   <!-- css stylesheet -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="../mouse.css">
-  <script src="../mouse.js" charset="utf-8"></script>
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap" rel="stylesheet">
+  <!-- js -->
+  <!-- <script src="login.js" charset="utf-8"></script> -->
   <!---->
+
   <title>Login</title>
 </head>
 
+
 <body>
+  <div class="ball" id="ball"></div>
 
   <div class="containBox">
+    <div class="help">
+      <h2>Help</h2>
+      <img src="images/star.png" alt="star" onclick="location.href='../Help/help.html'">
+    </div>
     <div class="loginBox">
 
       <form action="login.php" method="post">
         <h1>LOGIN</h1>
         <div class="formSection">
           <div class="formItem">
-            <input class="formInput" type="text" name="loginUsernameField" value="" placeholder="Username">
+            <input class="formInput" type="text" name="loginUsernameField" value="" placeholder="Username" required>
           </div>
 
           <div class="formItem">
-            <input class="formInput" type="password" name="loginPasswordField" value="" placeholder="Password">
+            <input class="formInput" type="password" name="loginPasswordField" value="" placeholder="Password" required>
           </div>
           <span id="checkAccount"></span>
 
@@ -45,18 +53,20 @@
           </div>
 
           <div class="formItem">
-            <input class="formInput" type="password" name="signPasswordField" value="" placeholder="Password">
+            <input class="formInput" type="password" name="signPasswordField" value="" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
           </div>
 
           <div class="formItem">
-            <input class="formInput" type="password" name="signPasswordRepField" value="" placeholder="Confirm Password">
+            <input class="formInput" type="password" name="signPasswordRepField" value="" placeholder="Confirm Password" minlength="8" required>
           </div>
           <button class="formButton" type="submit" name="buttonSignup">Sign-up</button>
         </div>
       </form>
 
     </div>
+
   </div>
+  <script src="../mouse.js" charset="utf-8"></script>
 
 </body>
 

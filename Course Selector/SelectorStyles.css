@@ -93,6 +93,7 @@ button {
 
 .easy {
   background-color: green;
+  animation: scale-up 1s ease-in-out;
 }
 
 .easy:hover {
@@ -101,6 +102,7 @@ button {
 
 .medium {
   background-color: gold;
+  animation: scale-up 1s ease-in-out;
 }
 
 .medium:hover {
@@ -109,6 +111,7 @@ button {
 
 .hard {
   background-color: firebrick;
+  animation: scale-up 1s ease-in-out;
 }
 
 .hard:hover {
@@ -137,4 +140,32 @@ form {
 
 .logout:hover {
   background-color: red;
+}
+
+
+
+@keyframes slide-up {
+    0% {
+      border-radius: 0px;
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes scale-up {
+    0% {
+      border-radius: 0;
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+
+        opacity: 1;
+    }
 }

@@ -1,6 +1,9 @@
 
 <?php
-
+echo '<link rel="preconnect" href="https://fonts.googleapis.com">';
+echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>';
+echo '<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap" rel="stylesheet">';
+echo "<link rel='stylesheet' type='text/css' href='php.css'>";
 
 if(isset($_POST['buttonLogin'])){
   $username = $_POST["loginUsernameField"];
@@ -29,12 +32,20 @@ if(isset($_POST['buttonLogin'])){
                 echo("<h1>
                   Wrong Password!
                 </h1>");
+                echo '<img src="http://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width="250" draggable = "false"/>';
+                echo("<h1>
+                Go back!
+                </h1>");
               }
             }
           }
           if($not_found){
             echo("<h1>
               Wrong Username!
+            </h1>");
+            echo '<img src="http://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width="250" draggable = "false"/>';
+            echo("<h1>
+            Go back!
             </h1>");
           }
         }
@@ -104,9 +115,15 @@ if(isset($_POST['buttonSignup'])){
      $jsonEnc = json_encode($json_data);
     file_put_contents("../Data/accounts.json", $jsonEnc);
 
+    header("Location: login.html");
+
   }elseif ($not_found == false) {
     echo("<h1>
       Username Already Exists
+    </h1>");
+    echo '<img src="http://i.stack.imgur.com/SBv4T.gif" alt="this slowpoke moves"  width="250" draggable = "false"/>';
+    echo("<h1>
+    Go back!
     </h1>");
   }
 
