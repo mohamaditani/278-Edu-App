@@ -8,6 +8,11 @@ Alert;Energetic;Observant;Watchful;Watchful
 Explicit;unreliable;confused;precise;precise
 Frantically;satisfactory;amok;calmly;amok
 Arrogant;Conceited;Humble;Progressive;Conceited
+Abandon;Join;try;Forsake;Forsake
+Abdicate;Join;Search;Abandon;Abandon
+Absolute;Division;Complete;Small;Complete
+Abstain;Refrain;Ingest;Consume;Refrain
+Accord;Confer;Refusal;Dissension;Confer
 Hierarchy;interruption;echelons;disorder;echelons
 Zest;Passive;Enthusiasm;Disgust;Enthusiasm
 Enigmatic;Illusive;Complicated;Puzzling;Puzzling
@@ -18,6 +23,11 @@ Lethargy;Serenity;Laxity;Active;Laxity
 Interim;Temporary;Internal;Timely;Temporary
 Gourmet;critic;amateur;praiser;critic
 Embezzle;Clear;Balance;Misappropriate;Misappropriate
+Fostering;Neglecting;Ignoring;Nurturing;Nurturing
+Propel;Drive;Jettison;Burst;Drive
+Defer;Defy;Differ;Postpone;Postpone
+Pious;Religious;Sympathetic;Afraid;Religious
+Germinate;Decay;Breed;Produce;Breed
 Forestall;Avoid;Frighten;Prevent;Prevent
 Nascent;Initial;Unpleasant;Latest;Initial
 Perspicacious;Clear;Hazy;Shrewd;Shrewd
@@ -28,3 +38,8 @@ Vituperate;Abuse;Appreciate;Copy;Abuse
 Incredulous;Honest;Reliable;Unreliable;Unreliable
 Circuitious;Direct;Strong;Cyclic;Cyclic
 Prevaricate;Truth;Early;Lie;Lie
+Paltry;Insignificant;Unfair;Average;Insignificant
+Disparage;Scatter;Discriminate;Belittle;Belittle
+Recuperate;Rehabilitate;Recover;Reimburse;Recover
+Augury;Prophecy;Astronomy;Intention;Prophecy
+Dielectric;Nonconductor;Instructive;Constructive;Nonconductor

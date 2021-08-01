@@ -1,9 +1,9 @@
 
-var maxTime = 5;
+var maxTime = 8;
 var questionCounter = 0;
 var currentScore = 0;
 var timers = null;
-var probNumbers = 10;
+var probNumbers = 15;
 
 
 var indexStart;
@@ -34,9 +34,9 @@ let names = url.searchParams.get('name');
   if (difficulty === "easy") {
     indexStart = 0;
   } else if (difficulty === "medium") {
-    indexStart = 10;
+    indexStart = 15;
   } else {
-    indexStart = 20;
+    indexStart = 30;
   }
 }
 
@@ -45,7 +45,7 @@ function nextProblem() {
   let htmlTime = document.getElementById("timeNum");
   htmlTime.innerText = maxTime;
 
-  maxTime = 6;
+  maxTime = 9;
   clearInterval(timers);
   let pickProblem = Math.floor(Math.random() * 2);
   if (pickProblem === 0) {
@@ -189,26 +189,32 @@ function sendGrades(grade){
   let names = url.searchParams.get('name');
 
   var ajax = new XMLHttpRequest();
-  ajax.onreadystatechange = function() {
-    if (ajax.readyState === 4 && ajax.status === 200) {
-      let jsonData = JSON.parse(ajax.responseText);
-      for(let i = 0; i < jsonData.users.length; i++){
-        if(jsonData.users[i].name === names){
-          if(difficulty === "easy"){
-            jsonData.users[i].English.easy.push(grade);
-          }else if (difficulty === "medium") {
-            jsonData.users[i].English.medium.push(grade);
-          }else{
-            jsonData.users[i].English.hard.push(grade);
-          }
-        }
-      }
-      alert(jsonData.users[0].English.easy);
-
-    }
+  ajax.onload = function (){
+    document.getElementById("titleBox").innerText = this.responseText;
   }
-  ajax.open("GET", jsonUrl, false);
-  ajax.send();
+
+  ajax.open("POST", "../Grades/grades.php");
+  ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  ajax.send("grade="+grade.toString()+"&name="+names+"&subj=english&difficulty="+difficulty);
 
 
 }
+
+// ajax.onreadystatechange = function() {
+  //   if (ajax.readyState === 4 && ajax.status === 200) {
+    //     let jsonData = JSON.parse(ajax.responseText);
+    //     for(let i = 0; i < jsonData.users.length; i++){
+      //       if(jsonData.users[i].name === names){
+        //         if(difficulty === "easy"){
+          //           jsonData.users[i].English.easy.push(grade);
+          //         }else if (difficulty === "medium") {
+            //           jsonData.users[i].English.medium.push(grade);
+            //         }else{
+              //           jsonData.users[i].English.hard.push(grade);
+              //         }
+              //       }
+              //     }
+              //     alert(jsonData.users[0].English.easy);
+              //
+              //   }
+              // }

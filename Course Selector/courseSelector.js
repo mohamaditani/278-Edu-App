@@ -4,6 +4,8 @@ var name = url.searchParams.get('name');
 // alert(name);
 window.onload = function() {
 
+  let f = document.getElementById("gradesFormValue");
+  f.setAttribute("value", name);
   document.getElementById("passName").innerHTML = name;
 }
 

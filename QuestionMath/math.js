@@ -141,19 +141,32 @@ function timer(answer) {
     questionCounter += 1;
     document.getElementById("guess").value = "";
 
-    if (questionCounter === questionCount) {
+    if (questionCounter != questionCount) {
+      nextProblem();
+    }else{
       endFunction();
-    }
-
-    nextProblem();
   }
 
-}
+}}
 
 function endFunction() {
-  alert(currentScore)
+  clearInterval(timers);
+  sendGrades(currentScore);
 }
-//
-// function submitQuiz(){
-// skipTimer = true;
-// }
+
+var jsonUrl = "../Data/accounts.JSON";
+
+function sendGrades(grade){
+  let url = new URL(window.location.href);
+  let difficulty = url.searchParams.get('pageDif');
+  let names = url.searchParams.get('name');
+
+  var ajax = new XMLHttpRequest();
+  ajax.onload = function (){
+    document.getElementById("titleBox").innerText = this.responseText;
+  }
+
+  ajax.open("POST", "../Grades/grades.php");
+  ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  ajax.send("grade="+grade.toString()+"&name="+names+"&subj=math&difficulty="+difficulty);
+}

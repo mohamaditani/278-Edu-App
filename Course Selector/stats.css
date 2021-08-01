@@ -1,0 +1,113 @@
+#hiddenName {
+  display: none;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(207, 235, 239, 255);
+  font-family: 'Poppins', sans-serif;
+
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+  color: #ed872d;
+  font-size: 60px;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  color: rgba(57, 128, 166, 1);
+}
+
+hr {
+  width: 30%;
+  height: 1px;
+  margin-bottom: 20px;
+  border: none;
+  border-top: dashed;
+  border-top-color: rgba(57, 128, 166, 1);
+}
+
+.largeDiv {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.engDiv {
+  background-color: rgb(1, 145, 200);
+}
+
+.mathDiv {
+  background-color: rgb(116, 194, 225);
+}
+
+.avgDiv {
+  background-color: rgb(255, 153, 0);
+}
+
+.engDiv, .avgDiv, .mathDiv {
+  overflow: hidden;
+  width: 20%;
+  max-height: 65px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px;
+  transition: max-height 0.5s ease-in-out;
+  border-radius: 25px;
+}
+
+.engDiv:hover, .avgDiv:hover, .mathDiv:hover {
+  max-height: 1000px;
+}
+
+.easy {
+  color: limegreen;
+}
+
+.medium {
+  color: orange;
+}
+
+.hard {
+  color: red;
+}
+
+.exit {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  padding: 10px;
+  transition: background 0.3s ease-in-out;
+  color: white;
+  border: none;
+  border-radius: 100px;
+  background-color: rgba(139, 0, 0, 0.2);
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
+
+.exit:hover {
+  background-color: rgba(139, 0, 0, 0.9);
+}
+
+li {
+  list-style: none;
+}
+
+li::before{
+  content: "\2022";
+  color: rgb(255, 153, 0);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+}
